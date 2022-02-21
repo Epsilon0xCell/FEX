@@ -11,7 +11,7 @@ fld1
 fldz
 fcomp
 fnstsw ax
-test ah, 041h; I *think* I've got the right flags there...
+test ah, 041h
 jp good
 mov rax, 0
 hlt
