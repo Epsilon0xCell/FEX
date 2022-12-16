@@ -25,6 +25,8 @@ vmovaps xmm8, [rdx + 16 * 7]
 mov rax, 0
 mov [rsi + 8 * 0], rax
 
+mov rax, -1
+
 vpextrd eax, xmm1, 0
 vpextrd ebx, xmm2, 0xFF
 vpextrd [rsi + 8 * 0 + 0], xmm3, 2
