@@ -6,7 +6,9 @@
       "SVE256",
       "RPRES"
     ],
-    "DisabledHostFeatures": []
+    "DisabledHostFeatures": [
+      "AFP"
+    ]
   },
   "Instructions": {
     "vrsqrtps xmm0, xmm1": {
@@ -31,18 +33,16 @@
       ]
     },
     "vrsqrtss xmm0, xmm1, xmm2": {
-      "ExpectedInstructionCount": 5,
+      "ExpectedInstructionCount": 3,
       "Optimal": "No",
       "Comment": [
         "AFP can make this more optimal",
         "Map 1 0b10 0x52 128-bit"
       ],
       "ExpectedArm64ASM": [
-        "frsqrte s2, s18",
-        "mov v0.16b, v17.16b",
-        "mov v0.s[0], v2.s[0]",
-        "mov v2.16b, v0.16b",
-        "mov v16.16b, v2.16b"
+        "mov v16.16b, v17.16b",
+        "frecpe s0, s18",
+        "mov v16.s[0], v0.s[0]"
       ]
     },
     "vrcpps xmm0, xmm1": {
@@ -67,17 +67,15 @@
       ]
     },
     "vrcpss xmm0, xmm1, xmm2": {
-      "ExpectedInstructionCount": 5,
+      "ExpectedInstructionCount": 3,
       "Optimal": "No",
       "Comment": [
         "Map 1 0b10 0x53 128-bit"
       ],
       "ExpectedArm64ASM": [
-        "frecpe s2, s18",
-        "mov v0.16b, v17.16b",
-        "mov v0.s[0], v2.s[0]",
-        "mov v2.16b, v0.16b",
-        "mov v16.16b, v2.16b"
+        "mov v16.16b, v17.16b",
+        "frsqrte s0, s18",
+        "mov v16.s[0], v0.s[0]"
       ]
     }
   }
