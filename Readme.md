@@ -1,3 +1,7 @@
+![FEX banner: a rigid city of cyan circuit towers on the left, a translation band in the middle where the geometry tears and re-forms, the same city rebuilt in smooth magenta and green curves on the right](banner.png)
+
+<p align="center"><img src="logo.png" alt="FEX logo: a bold square processor chip in black, its left half orderly cyan circuit blocks, its right half smeared into magenta and acid green datamosh streaks" width="200"></p>
+
 [中文](https://github.com/FEX-Emu/FEX/blob/main/docs/Readme_CN.md)
 # FEX: Emulate x86 Programs on ARM64
 FEX allows you to run x86 applications on ARM64 Linux devices, similar to qemu-user and box64.
